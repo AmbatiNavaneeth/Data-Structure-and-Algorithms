@@ -36,7 +36,27 @@ class Solution:
                 min_sum=min(summ,min_sum)
             else:
                 continue
-        return min_sum if min_sum!=float('+inf') else -1  
+        return min_sum if min_sum!=float('+inf') else -1 
+
+>>>Longest subarray with sum K
+
+class Solution:
+    def longestSubarray(self, nums, k):   #brutforce
+        n=len(nums)
+        valid=[]
+        for i in range(n):
+            for j in range(i+1,n+1):
+                subarrays=nums[i:j]
+                valid.append(subarrays)
+        max_len=0
+        for num in range(len(valid)):
+            summ=sum(valid[num])
+            if summ==k:
+                max_len=max(max_len,len(valid[num]))
+        return (max_len)
+                    
+                    
+
                 
 
             
