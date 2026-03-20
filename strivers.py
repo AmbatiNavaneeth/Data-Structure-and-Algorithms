@@ -9,3 +9,11 @@ for i in range(len(nums)):
     else:
         c=0
 print(max_len)
+
+✅ Code for sum of digits:
+def sum_of_digits(num):
+    total = 0
+    while num > 0:
+        total += num % 10
+        num //= 10
+    return total
