@@ -41,7 +41,26 @@ for num in nums:
         s=num
     elif num<ss and num!=s:
         ss=num
+
+Check if All Elements Are Same
+n=[1]
+if len(n)<2:
+    print(False)
+i=0
+j=len(n)-1
+while i<j:
+    if n[i]!=n[j]:
+        print(False)
+        break
+    elif n[i]==n[j]:
+        i+=1
+        j-=1
+else:
+    print(True)
+
 if ss==float("inf"):
     print(-1)
 else:
     print(ss)
+
+
