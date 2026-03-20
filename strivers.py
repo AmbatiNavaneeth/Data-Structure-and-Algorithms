@@ -17,3 +17,16 @@ def sum_of_digits(num):
         total += num % 10
         num //= 10
     return total
+
+arr=[10,20,30,20,10,30]
+freq={}
+for num in arr:
+    if num in freq:
+        freq[num]+=1
+    else:
+        freq[num]=1
+ans=[]
+for key in freq:
+    if freq[key]>=2:
+        ans.append(key)
+print(ans)
