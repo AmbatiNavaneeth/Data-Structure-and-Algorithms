@@ -30,3 +30,18 @@ for key in freq:
     if freq[key]>=2:
         ans.append(key)
 print(ans)
+
+second smallest 
+nums=[1,3,4,5,6]
+s=float("inf")
+ss=float("inf")
+for num in nums:
+    if num<s:
+        ss=s
+        s=num
+    elif num<ss and num!=s:
+        ss=num
+if ss==float("inf"):
+    print(-1)
+else:
+    print(ss)
