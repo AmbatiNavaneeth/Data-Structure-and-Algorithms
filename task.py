@@ -136,5 +136,41 @@ for num in m:
         pass
 print(m)
 
-
+✅Check prime numbers and indices in a list
+def check_prime(n):
+    if n<2:
+        return False
+    for i in range(2,int(n**0.5) + 1):
+        if n%i==0:
+            return False
+    return True
         
+nums=[1,2,3,4,5,6]
+for i in range(len(nums)):
+    if check_prime(nums[i]):
+        print(nums[i],end=" ")
+
+✅Return duplicates
+nums=[1,2,2,3,4,4,5]
+seen=[]
+ans=[]
+for num in nums:
+    if num in seen:
+        ans.append(num)
+    else:
+        seen.append(num)
+print(ans)
+ using dictionary
+freq={}
+for num in nums:
+    if num in freq:
+        freq[num]+=1
+    else:
+        freq[num]=1
+ans=[]
+for num in freq:
+    if freq[num]>1:
+        ans.append(num)
+    else:
+        pass
+print(ans)
