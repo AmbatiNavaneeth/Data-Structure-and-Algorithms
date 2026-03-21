@@ -174,3 +174,13 @@ for num in freq:
     else:
         pass
 print(ans)
+
+✅rotate array
+nums=[1,2,3,4]
+k=2
+k=k%len(nums)
+nums.reverse()
+nums[:k]=reversed(nums[:k])
+nums[k:]=reversed(nums[k:])
+print(nums)
+   
