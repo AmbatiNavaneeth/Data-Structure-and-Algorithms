@@ -7,7 +7,7 @@ class Solution:
             avg=summ/k
             max_avg=max(avg,max_avg)
         return max_avg
-        
+         
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:  #Optimal
         win_sum=sum(nums[:k])
