@@ -183,4 +183,25 @@ nums.reverse()
 nums[:k]=reversed(nums[:k])
 nums[k:]=reversed(nums[k:])
 print(nums)
-   
+
+✅check phone number
+s="234423"
+for ch in s:
+    if not ch.isdigit():
+        print(False)
+        break
+else:
+    print(True)
+
+✅change cases
+s="AmbaTi NavAneeTh"
+ans=""
+for ch in s:
+    if 65<=ch<=90:
+        ans+=chr(ch(ord)+32)
+    elif 97<=ch<=122:
+        ans+=chr(ch(ord)-32)
+    else:
+        pass
+print(ans)
+        ans+=
