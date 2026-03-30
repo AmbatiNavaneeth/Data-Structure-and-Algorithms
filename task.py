@@ -204,4 +204,54 @@ for ch in s:
     else:
         pass
 print(ans)
-        ans+=
+
+✅string to numeric
+s="twofourtwosix"
+freq={"one":1,'two':2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"zero":0}
+res=''
+ans=''
+for ch in s:
+    res+=ch
+    if res in freq:
+        ans+=str(freq[res])
+        res=''
+    else:
+        pass
+print(ans)
+
+✅a4b3c5
+s="aabbbc"
+f={}
+for ch in s:
+    f[ch]=f.get(ch,0)+1
+ans=""
+for key,value in f.items():
+    ans+=str(key)
+    ans+=str(value)
+print(ans)
+
+✅flatten
+nums=[[1,2],[3,4],[5,6]]
+ans=[]
+for num in nums:
+    for i in num:
+        ans.append(i)
+print(ans)
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
