@@ -230,6 +230,19 @@ for key,value in f.items():
     ans+=str(value)
 print(ans)
 
+✅continous a4b3a2
+s='aabbbcaa'
+c=1
+ans=""
+for i in range(1,len(s)):
+    if s[i-1]==s[i]:
+        c+=1
+    else:
+        ans+=s[i-1]+str(c)
+        c=1
+ans+=s[-1]+str(c)
+print(ans)
+
 ✅flatten
 nums=[[1,2],[3,4],[5,6]]
 ans=[]
@@ -239,7 +252,7 @@ for num in nums:
 print(ans)
 
 
-    
+  
     
     
     
