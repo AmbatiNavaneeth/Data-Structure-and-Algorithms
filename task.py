@@ -262,8 +262,27 @@ for i in range(1,101):
     else:
         print(i)
     
-  
-    
+✅PRIME NUMBER COUNT AND PN BETWEEN A RANGE
+def is_prime(num):
+    if num<=1:
+        return False
+    else:
+        for i in range(2,int(num**0.5)+1):
+            if num%i==0:
+                return False
+        else:
+            return True
+m=10
+n=20
+c=0
+for i in range(m,n+1):
+    if is_prime(i):
+        c+=1
+print(c)
+
+for i in range(m,n+1):
+    if is_prime(i):
+        print(i,end=" ")
     
     
     
