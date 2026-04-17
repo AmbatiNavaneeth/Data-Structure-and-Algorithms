@@ -284,10 +284,46 @@ for i in range(m,n+1):
     if is_prime(i):
         print(i,end=" ")
     
+
+class Calculator:
+    def add(self, a, b):
+        return a + b
     
+    def sub(self, a, b):
+        return a - b
     
+    def mul(self, a, b):
+        return a * b
     
-    
+    def div(self, a, b):
+        if b == 0:
+            return "Division by zero not allowed"
+        return a / b
+
+
+✅ main program
+c = Calculator()
+
+print("Select operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+choice = int(input("Enter choice (1-4): "))
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if choice == 1:
+    print("Result:", c.add(a, b))
+elif choice == 2:
+    print("Result:", c.sub(a, b))
+elif choice == 3:
+    print("Result:", c.mul(a, b))
+elif choice == 4:
+    print("Result:", c.div(a, b))
+else:
+    print("Invalid choice")
     
     
     
