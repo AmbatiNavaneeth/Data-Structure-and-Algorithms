@@ -60,3 +60,21 @@ maxx=250
 n=[40,39,94,10,20,58,76,45]
 n.sort()
 print(obj.balloon_capacity(maxx,n))
+
+1: Sweet Seventeen Given a maximum of four digits to the base 17(10 -> A, 11 -> B, 12 -> C, 16 -> G) as input, output its decimal val.
+def base_17(s):
+    map={'A':10,'B':11,'C':12,'D':13,'E':14,'F':15,'G':16}
+    res=0
+    power=0
+    for ch in reversed(s):
+        if ch.isdigit():
+            val=int(ch)
+        else:
+            val=map[ch]
+        res+=val*(17**power)
+        power+=1
+    return res
+    
+print(base_17("23GF"))
+
+
