@@ -73,8 +73,101 @@ def base_17(s):
             val=map[ch]
         res+=val*(17**power)
         power+=1
-    return res
-    
+    return res   
 print(base_17("23GF"))
+
+Move zeros to end unsroted 
+class Solution:
+    def moveZeroes(self, nums: list[int]):
+        j = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[j], nums[i] = nums[i], nums[j]
+                j += 1
+        return nums
+        
+Move zeros to start unsroted 
+class Solution:
+    def moveZeroes(self, nums: list[int]):
+        j=0
+        for i in range(len(nums)):
+            if nums[i]==0:
+                  nums[j], nums[i] = nums[i], nums[j]
+                j += 1
+        return nums
+
+FOR SORT USE COUNT AND [0]*COUNT
+                
+DUTCH FLAG FOR 0 1 2
+nums = [2,1,0,2,1,0,0,1,2,0]
+low = 0
+mid = 0
+high = len(nums) - 1
+while mid <= high:
+    if nums[mid] == 0:
+        nums[low], nums[mid] = nums[mid], nums[low]
+        low += 1
+        mid += 1
+    elif nums[mid] == 1:
+        mid += 1
+    else:  # nums[mid] == 2
+        nums[mid], nums[high] = nums[high], nums[mid]
+        high -= 1
+print(nums)
+
+ ANOTHER METHOD CAN BE USE COUNT
+ ANOTHER METHOD 
+nums = [2,1,0,2,1,0,0,1,2,0]
+# First pass → bring 0s to front
+j = 0
+for i in range(len(nums)):
+    if nums[i] == 0:
+        nums[i], nums[j] = nums[j], nums[i]
+        j += 1
+# Second pass → bring 2s to end
+k = len(nums) - 1
+for i in range(len(nums)-1, -1, -1):
+    if nums[i] == 2:
+        nums[i], nums[k] = nums[k], nums[i]
+        k -= 1
+print(nums)
+
+Given an integer array Arr of size N the task is to find the countofelements whose value is greater than all of its prior elements. 
+n=[9,8,7,6,5]
+c=0
+maxx=float('-inf')
+for i in n:
+    if i>maxx:
+        c+=1
+        maxx=i
+    else:
+        pass
+print(c)
+
+MULTIPLYING THE DIGITS
+n=5244
+if n>0:
+    ans=1
+    for ch in str(n):  abs(n)-to handle neg values
+        ans*=int(ch)
+    print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
