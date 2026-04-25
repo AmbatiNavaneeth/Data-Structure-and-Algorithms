@@ -183,3 +183,82 @@ for num in nums:
     else:
         seen.append(num)
 print(dup)
+
+
+nums=[3,4,0,3,0,7,0]
+i=0
+for j in range(len(nums)):
+    if nums[j]==0:
+        nums[i],nums[j]=nums[j],nums[i]
+        i+=1
+print(nums)
+
+MAJORITY ELEMENT
+nums=[4,3,6,2,2,2,2]
+freq={}
+for num in nums:
+    freq[num]=freq.get(num,0)+1
+for i in freq:
+    if freq[i]>len(nums)//2:
+        print(i)
+
+nums = [4,3,6,2,2]
+candidate = None
+count = 0
+for num in nums:
+    if count == 0:
+        candidate = num
+    count += (1 if num == candidate else -1)
+if nums.count(candidate) > len(nums)//2:
+    print(candidate)
+else:
+    print("No majority element")
+
+LEAP YEAR
+n=2024
+if (n%400==0) or (n%4==0 and n%100!=0):
+    print("Leap")
+else:
+    print("Not")
+    
+
+n=10
+for i in range(1,n+1):
+    print(i,end=' ')
+
+PRINTING 1-N USING RECURSION
+def print_numbers(n):
+    if n == 0:
+        return
+    print_numbers(n - 1)
+    print(n,end=" ")
+print_numbers(5)
+
+FACTORIAL
+def factorial(n):
+    if n==0 or n==1:
+        return 1
+    return n*factorial(n-1)
+print(factorial(5))
+
+FIBANOCCI
+def fibanocci(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    return fibanocci(n-1)+fibanocci(n-2)
+print(fibanocci(5))
+
+SUM OF DIGITS
+def son(n):
+    if n==0:
+        return 0
+    return n%10+son(n//10)
+print(son(2323))
+
+REVERSE A STRING
+def reverse_string(s):
+    if len(s) == 0:
+        return s
+    return reverse_string(s[1:]) + s[0]
