@@ -324,8 +324,36 @@ elif choice == 4:
     print("Result:", c.div(a, b))
 else:
     print("Invalid choice")
+
+
+
+num=[1,4,7,9]
+ans=[]
+summ=num[0]
+print(summ)
+ans.append(summ)
+for i in range(1,len(num)):
+    summ+=num[i]
+    ans.append(summ)
+print(ans)
     
-    
+nums=[1,2,3,4,5,6,7,8]
+k=3
+result = nums[:k] + nums[k:][::-1]
+print(result)
+
+class Solution:
+    def summofdigits(self, n):
+        while n >= 10:   # keep going until single digit
+            ans = 0
+            for ch in str(n):
+                ans += int(ch)
+            n = ans
+        return n
+
+obj = Solution()
+n = 2
+print(obj.summofdigits(n))
     
     
     
