@@ -110,14 +110,22 @@ while i<j:
         i+=1
         j-=1
 print(add)
-      without sorting  
+
+without sorting  
+n=[2,1,6,3,5,4,7,2,1]
+k=3
 seen=set()
-res=[]
-for num in n:
-    if k-num in seen:
-        res.append((k-num,num))
-    seen.add(num)
-print(res)
+ans=[]
+for i in n:
+    if k-i in seen:
+        temp=([k-i,i])
+        if temp in ans:
+            pass
+        else:
+            ans.append(temp)
+    else:
+        seen.add(i)
+print(ans)
 
 
 ✅remove odds and evens
