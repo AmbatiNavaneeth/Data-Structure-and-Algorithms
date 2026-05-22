@@ -334,7 +334,7 @@ else:
     print("Invalid choice")
 
 
-
+✅
 num=[1,4,7,9]
 ans=[]
 summ=num[0]
@@ -344,12 +344,14 @@ for i in range(1,len(num)):
     summ+=num[i]
     ans.append(summ)
 print(ans)
-    
+
+✅
 nums=[1,2,3,4,5,6,7,8]
 k=3
 result = nums[:k] + nums[k:][::-1]
 print(result)
 
+✅
 class Solution:
     def summofdigits(self, n):
         while n >= 10:   # keep going until single digit
@@ -362,7 +364,47 @@ class Solution:
 obj = Solution()
 n = 2
 print(obj.summofdigits(n))
-    
+
+✅
+s="hello world n" #n world hello
+ss=s.split()
+print(ss)
+
+i=0
+j=len(ss)-1
+while i<j:
+    ss[i],ss[j]=ss[j],ss[i]
+    i+=1
+    j-=1
+print(' '.join(ss))
+
+✅
+s="hello world hello" #olleh dlrow olleh
+ss=s.split()
+ans=[]
+for ch in ss:
+    res=''
+    for i in ch[::-1]:
+        res+=i
+    ans.append(res)
+    res=''
+print(' '.join(ans))
+
+✅
+s="hello navaneeth hi" #"ihhte enavanoll eh"
+s=list(s)
+i=0
+j=len(s)-1
+while i<j:
+    if s[i]==" ":
+        i+=1
+    elif s[j]==" ":
+        j-=1
+    else:
+        s[i],s[j]=s[j],s[i]
+        i+=1
+        j-=1
+print("".join(s))
     
     
     
